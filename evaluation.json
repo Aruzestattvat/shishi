@@ -1,0 +1,135 @@
+{
+  "synthetic_only": true,
+  "system_reminders_written": 0,
+  "usage": {
+    "day": "2026-10-21",
+    "tokens": 2965,
+    "calls": 4
+  },
+  "results": [
+    {
+      "case": "明确OK",
+      "expected": "auto",
+      "passed": true,
+      "items": [
+        {
+          "title": "参加项目会议",
+          "kind": "event",
+          "due": "2026-10-22T15:00:00+08:00",
+          "owner": "me",
+          "action": "create",
+          "target_id": "",
+          "confidence": 0.9,
+          "evidence": [
+            {
+              "id": "a",
+              "text": "明天下午三点我们开项目会议，你能参加吗？",
+              "direction": "1",
+              "ts": 1792559458038,
+              "kind": "text",
+              "truncated": false,
+              "quote": "明天下午三点我们开项目会议，你能参加吗？"
+            },
+            {
+              "id": "b",
+              "text": "OK",
+              "direction": "2",
+              "ts": 1792559518038,
+              "kind": "text",
+              "truncated": false,
+              "quote": "OK"
+            }
+          ],
+          "reason": "对方提出明确安排，我回复OK表示同意，视为我的承诺。",
+          "review_reasons": [],
+          "auto": true
+        }
+      ],
+      "seconds": 2.25
+    },
+    {
+      "case": "未回复",
+      "expected": "review",
+      "passed": true,
+      "items": [
+        {
+          "title": "参加项目会议",
+          "kind": "event",
+          "due": "2026-10-22T15:00:00+08:00",
+          "owner": "uncertain",
+          "action": "create",
+          "target_id": "",
+          "confidence": 0.7,
+          "evidence": [
+            {
+              "id": "a",
+              "text": "明天下午三点我们开项目会议，你能参加吗？",
+              "direction": "1",
+              "ts": 1792559458038,
+              "kind": "text",
+              "truncated": false,
+              "quote": "明天下午三点我们开项目会议，你能参加吗？"
+            }
+          ],
+          "reason": "对方提出明确会议安排并询问我能否参加，我尚未回复，因此作为待查看事项，owner为uncertain。",
+          "review_reasons": [
+            "需确认是否由你负责（自动加入要求你明确承诺）",
+            "模型证据把握不足"
+          ],
+          "auto": false
+        }
+      ],
+      "seconds": 1.94
+    },
+    {
+      "case": "明确拒绝",
+      "expected": "none",
+      "passed": true,
+      "items": [],
+      "seconds": 1.12
+    },
+    {
+      "case": "跨话题",
+      "expected": "not_auto",
+      "passed": true,
+      "items": [
+        {
+          "title": "参加项目会议",
+          "kind": "event",
+          "due": "2026-10-22T15:00:00+08:00",
+          "owner": "me",
+          "action": "create",
+          "target_id": "",
+          "confidence": 0.9,
+          "evidence": [
+            {
+              "id": "a",
+              "text": "明天下午三点开项目会议，你来吗？",
+              "direction": "1",
+              "ts": 1792559458038,
+              "kind": "text",
+              "truncated": false,
+              "quote": "明天下午三点开项目会议，你来吗？"
+            },
+            {
+              "id": "c",
+              "text": "好的",
+              "direction": "2",
+              "ts": 1792559578038,
+              "kind": "text",
+              "truncated": false,
+              "quote": "好的"
+            }
+          ],
+          "reason": "对方邀请会议，我回复好的表示同意，因此创建事件。",
+          "review_reasons": [
+            "需确认是否由你负责（自动加入要求你明确承诺）",
+            "模型证据把握不足"
+          ],
+          "auto": false
+        }
+      ],
+      "seconds": 1.81
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+.build/
+.modulecache/
+dist/
+.previous.app/
+.tmp-chrome/
+*.sqlite3
+*.sqlite3-*
+backup-*.sqlite3
+.db-backup-*.sqlite3
+__pycache__/
+*.pyc
+.DS_Store
+.tmp*/
+*.log
+.pytest_cache/
+*.zip
+releases/
